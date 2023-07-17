@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Button } from "flowbite-react";
 import DefaultModal from "./DefaultModal";
 import OpmlForm from "./OpmlForm";
 
@@ -17,8 +16,12 @@ const OpmlFormModal = ({ open, setOpen }: IProps) => {
       body={<OpmlForm />}
       footer={
         <>
-          <Button onClick={() => setOpen}>Cancel</Button>
-          <Button type="submit">Upload</Button>
+          <button className="btn" onClick={() => setOpen}>
+            Cancel
+          </button>
+          <button className="btn" type="submit">
+            Upload
+          </button>
         </>
       }
     ></DefaultModal>

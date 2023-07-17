@@ -1,4 +1,3 @@
-import { FileInput, Label } from "flowbite-react";
 import * as React from "react";
 import { useForm } from "react-hook-form";
 
@@ -18,11 +17,12 @@ const OpmlForm = (props: IProps) => {
     <div>
       <form onSubmit={onSubmit}>
         <div className="max-w-md" id="fileUpload">
-          <div className="mb-2 block">
-            <Label htmlFor="file" value="Upload file" />
-          </div>
-          <FileInput
-            helperText="A profile picture is useful to confirm your are logged into your account"
+          <label className="label" htmlFor="file">
+            <span className="label-text">Upload File</span>
+          </label>
+          <input
+            type="file"
+            className="file-input file-input-bordered w-full max-w-xs"
             id="file"
             accept="text/x-opml"
             onChange={(e) => {
